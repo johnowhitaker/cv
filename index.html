@@ -11,7 +11,7 @@
       <link rel="shortcut icon" href="favicon.ico">
       <link rel="apple-touch-icon" href="icon.png" />
 
-   <title>TITLE</title>
+   <title>Jonathan Whitaker</title>
 
 
    <!-- Bootstrap core CSS -->
@@ -31,12 +31,29 @@
          <script src="js/respond.min.js"></script>
        <![endif]-->
 
+
+       <!-- Some useful functions-->
+       <script>
+      function showHide(bid, divID) {
+        var x = document.getElementById(divID);
+          if (x.style.display === "none") {
+              x.style.display = "block";
+          } else {
+              x.style.display = "none";
+          }
+          var x = document.getElementById(bid);
+            if (x.innerHTML === "Hide") {
+                x.innerHTML = "Show more";
+            } else {
+                x.innerHTML = "Hide";
+            }
+      }
+      </script>
+
  </head>
  <body>
 
-
-
-   <div class="header" id="headerwrap">
+<div class="header" id="headerwrap">
      <div class="container">
        <div class="row centered">
          <div class="col-lg-12">
@@ -49,17 +66,18 @@
      </div><!--/.container-->
    </div><!--/.#headerwrap-->
 
-
-   <section id="about" name="about"></section>
-    <div class="about">
+<!--About-->
+<section id="about" name="about"></section>
+<div class="about">
       <div class="container">
         <div class="row">
           <div class="col-lg-2 col-lg-offset-1">
             <h5>ABOUT</h5>
           </div>
           <div class="col-lg-6">
-   <p> A creative individual with a passion for aquiring new skills and using them to help people. ... <!--Add some stuff-->
-   </div>
+<p> A creative individual with a passion for aquiring new skills and using those
+skills across disciplines to make the world a slightly better place. <!--Add some stuff?-->
+</div>
           <div class="col-lg-3">
             <p><a href="my-resume.pdf"><i class="icon-file"></i> <sm>DOWNLOAD PDF (NOT DONE YET)</sm></a></p>
           </div>
@@ -70,36 +88,45 @@
 
 
 
-    <section id="resume" name="resume"></section>
+
+
+
+<section id="resume" name="resume"></section>
+
+
     	<!-- EDUCATION SECTION -->
     	<div class="container desc">
     		<div class="row">
-
     				<div class="col-lg-2 col-lg-offset-1">
     					<h5>EDUCATION</h5>
     				</div>
-    				<!-- EDIT: education line 1 -->
     				<div class="col-lg-6">
-    					<p><t>Bachelor of Awesomeness</t><br/>
-    						University of Maryland
-    						<!--<br/><i>Extra info here</i>-->
+    					<p><t>Currently third year Electrical and Computer Engineering at UCT</t><br/>
+    						Deans list for the first two years, GPA of 74%.
     					</p>
     				</div>
     				<div class="col-lg-3">
-    					<p><sm>Expected SPRING 2015</sm><br/>
+    					<p><sm>Graduating 2018</sm><br/>
     					<imp><sm>IN PROGRESS</sm></imp>
     					</p>
     				</div>
-
-    				<!-- EDIT: education line 2 -->
     				<div class="col-lg-6 col-lg-offset-3">
-    					<p><t>Associate of Degrees </t><br/>
-    						 Lil 'ol College
-    						<!--<br/><i>Extra info here</i>-->
+    					<p><t>Cambridge A Levels</t><br/>
+    						 St Johns College - A*s in Maths, Physics and Chemistry
     					</p>
     				</div>
     				<div class="col-lg-3">
-    					<p><sm>JUNE 2012</sm></p>
+    					<p><sm>2013</sm></p>
+    				</div>
+
+            <div class="col-lg-6 col-lg-offset-3">
+    					<p><t>SATs</t><br/>
+                2200 for SAT, 2360 for SAT Subject Tests
+                760 for Reading, 750 for Math, 690 for Writing. 800 for Mathematics 2, 800 for Physics, 760 for Chemistry
+    					</p>
+    				</div>
+    				<div class="col-lg-3">
+    					<p><sm>2013</sm></p>
     				</div>
 
     		</div><!--/.row -->
@@ -110,33 +137,85 @@
     	<!-- WORK SECTION -->
     	<div class="container desc">
     		<div class="row">
-
     				<div class="col-lg-2 col-lg-offset-1">
     					<h5>WORK</h5>
     				</div>
-    				<!-- EDIT: work line 1 -->
     				<div class="col-lg-6">
-    					<p class="tight"><t>Position </t><br/>
-    						Thatone Corp. <br/>
+    					<p class="tight"><t>Vacation work</t><br/>
+    						University of Cape Town, White Lab <br/>
     					</p>
-    					<p><more>Here's where you put a description of the position you held. Responsibilities, accomplishments - the same as you would do on a standard paper resume, but this will be online and look cooler.</more></p>
+    					<p><more>
+
+                Worked on a project which involved building a jig to assist with programming a microcontroller and upgrading the firmware of a device.
+                This involved some CAD work, setting up a raspberry pi computer and writing a python library that used lib-USB to communicate
+                with the bootloader of STMicroElectronic’s ST-Link v2 debugger.
+                <!--HIDE THIS BIT?-->
+                Part of this was also reverse engineering the ST-Link’s firmware
+                upgrade protocol and figuring out how to encrypt the firmware files in a way that would be decipherable by the bootloader code.
+                1 month of work in total.
+              </more></p>
     				</div>
     				<div class="col-lg-3">
-    					<p><sm>AUGUST 2012 - CURRENT <br />
-    					CITY, STATE, COUNTRY</sm></p>
+    					<p><sm>JUNE 2017 - JULY 2017<br />
+    					CAPE TOWN</sm></p>
     				</div>
 
-    				<!-- EDIT: work line 2-->
+    				<!-- Elephant stuff-->
     				<div class="col-lg-6 col-lg-offset-3">
-    					<p class="tight"><t>Previous Position</t><br/>
-    						Another Organization Ltd. <br/>
+    					<p class="tight"><t>Vacation Work</t><br/>
+    						Assisting with Elephant Research in Hluhluwe-Impholozi Park.<br/>
     					</p>
-    					<p><more>You worked at another job! Great! Describe waht you did there, include those responsibilities and accomplishments again.</more></p>
+    					<p><more>
+                Developing software to assist with elephant population monitoring.
+                This involved flying down to the park on two epatate occasions to work with the Principal Investigator Timothy Kuiper
+                on the elephant monitoring program there. My role was initially to develop an application
+                for rapid manual photo-identification of elephants sighted in the park, but soon expended as I extended the application
+                 with more features, assisted with scripts to automate the processing of raw location data into a useable form and
+                 planned further development of a full software suite for elephant monitoring, population estimation and identification.
+                 I’ve also ended up running a bunch of CPU intensive simulations over the last few months as the need arises -
+                 my beefy PC being much more suited to the task than the laptop that was doing the task. <!--div123-->
+
+              </more></p>
     				</div>
     				<div class="col-lg-3">
-    					<p><sm>JUNE 2010 - JULY 2012 <br />
-    					GOTHAM CITY, USA</sm></p>
+    					<p><sm>OCTOBER 2016, MAY 2017 and ONGOING<br />
+    					HLUHLUWE-IMPHOLOZI PARK, KWAZULU-NATAL</sm></p>
     				</div>
+
+            <!-- Brain stuff-->
+    				<div class="col-lg-6 col-lg-offset-3">
+    					<p class="tight"><t>Research Assistant</t><br/>
+    						Working with UCT's Neuropshychiatry (SP) Department<br/>
+    					</p>
+    					<p><more>
+                Helping Dr Samantha Brooks with some of her addiction research. Building scripts
+                to automate the pre-processing of fMRI data and then analysing said data. Also presenting
+                the (relatively new) methods we were using to the Progressive Neuropshychiatry Group of Cape Town.
+                I also wrote a python application to quickly visualize a time series of scans and show regions of high activity.
+                Although the project didn't turn into a publication, it was an effective crash course in neuroscience, matlab and bayesian statistics.
+              </more></p>
+    				</div>
+    				<div class="col-lg-3">
+    					<p><sm>2015<br />
+    					GROOTE SCHUUR, CAPE TOWN</sm></p>
+    				</div>
+
+            <!-- Baobab stuff -->
+            <div class="col-lg-6 col-lg-offset-3">
+              <p class="tight"><t>CONSULTANT</t><br/>
+                Resource assessments, sustainability and research<br/>
+              </p>
+              <p><more>
+                Worked with Clare Griffiths (ref) on a series of projects for Phytotrade Africa and Bio-Innovation Zimbabwe (BIZ).
+                Each project had it's own unique challenges, but most involved literature reviews, data collection, GIS work,
+                some form of analysis and writing up reports or papers.
+                <p>....</p>
+              </more></p>
+            </div>
+            <div class="col-lg-3">
+              <p><sm>NOVEMBER 2012 - MARCH 2015<br />
+              ZIMBABWE AND BOTSWANA</sm></p>
+            </div>
     		</div><!--/.row -->
     		<br>
     		<hr>
@@ -177,6 +256,37 @@
 
 
 
+<!-- INTERESTS-->
+      <div class="container desc">
+    		<div class="row">
+    				<div class="col-lg-2 col-lg-offset-1">
+    					<h5>INTERESTS</h5>
+    				</div>
+
+    				<!-- EDIT: awards line 1-->
+    				<div class="col-lg-6">
+    					<p><t>MUSIC</t><br/>
+    						Award-giving organization<br/>
+    					</p>
+    				</div>
+    				<div class="col-lg-3">
+    					<p><sm>NOVEMBER 2013</sm></p>
+    				</div>
+
+    				<!-- EDIT: awards line 2-->
+    				<div class="col-lg-6 col-lg-offset-3">
+    					<p class="tight"><t>Another award</t><br/>
+    						Awards Site
+    					</p>
+    					<p><more>This award has a description. You won it eating pie. Or probably doing something more job-related. Maybe you won't even keep this section - you'll replace it with Skills or something else!</more></p>
+    				</div>
+    				<div class="col-lg-3">
+    					<p><sm>2013</sm></p>
+    				</div>
+
+    		</div><!--/.row -->
+    		<br>
+    	</div><!--/.container -->
 
 
 <section id="contact" name="contact"></section>
@@ -191,7 +301,7 @@
 				<!-- EDIT: email -->
 				<div class="col-lg-6">
 					<p><t>Email</t><br/>
-						<a href="mailto:YOUR@EMAIL.com" class="mail">YOUR@EMAIL.com</a> <br/>
+						<a href="mailto:johnowhitaker@gmail.com">johnowhitaker@gmail.com</a> <br/>
 					</p>
 					<!-- EDIT: address -->
 					<p><t>Address</t><br/>
