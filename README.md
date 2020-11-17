@@ -1,3 +1,3 @@
-My Resume website. See it live at: https://johnowhitaker.github.io/
+My Resume website.
 =========
 Based on [this tutorial](https://medium.com/p/991845147ec).
